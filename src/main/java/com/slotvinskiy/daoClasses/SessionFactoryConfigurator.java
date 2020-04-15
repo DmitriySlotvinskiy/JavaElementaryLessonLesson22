@@ -39,6 +39,7 @@ public class SessionFactoryConfigurator {
         try {
             properties.load(new FileInputStream(file));
         } catch (IOException e) {
+            System.out.println("Couldn't find configuration file. Please check if it exist.");
             e.printStackTrace();
         }
         return properties;
